@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'testgame.TestGame'
+applicationDefaultJvmArgs = ['-XstartOnFirstThread']
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile name: 'radon-distribution'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.2'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'testgame.TestGame'
+    }
+}

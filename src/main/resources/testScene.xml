@@ -1,6 +1,9 @@
 <rn:Node path="root">
-    <rn:Node path="foo">
-        <rn:Node path="leaf" />
+    <rn:Node path="entities">
+        <rn:Mesh path="sphere">
+            <rn:PolarSphereGeometry lat="20" long="20" />
+            <rn:SolidColorMaterial red="0" green="0" blue="1" />
+        </rn:Mesh>
     </rn:Node>
-    <rn:Node path="leaf" />
 </rn:Node>
+

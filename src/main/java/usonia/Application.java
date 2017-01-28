@@ -1,15 +1,16 @@
 package usonia;
 
-import xyz.izaak.radon.external.xml.XmlSceneLoader;
-import xyz.izaak.radon.scene.Scene;
+import xyz.izaak.radon.Game;
+import xyz.izaak.radon.gamesystem.KeyReleaseQuitSystem;
+import xyz.izaak.radon.math.Points;
+
+import static org.lwjgl.glfw.GLFW.GLFW_KEY_ESCAPE;
 
 public class Application {
     public static void main(String... args) {
-        System.out.println("hey");
-
-        XmlSceneLoader testSceneLoader = new XmlSceneLoader("testScene.xml");
-        Scene test = testSceneLoader.newInstance();
-
-        System.out.println(test.getNode("root"));
+        Game game = new Game("Usonia", 800, 800, Points.BLACK);
+        game.addGameSystem(new KeyReleaseQuitSystem(game.getWindow(), GLFW_KEY_ESCAPE));
+        game.addGameSystem(new SceneLoaderSystem());
+        game.run();
     }
 }

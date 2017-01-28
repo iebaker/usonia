@@ -1,0 +1,6 @@
+<rn:Node path="root">
+    <rn:Node path="foo">
+        <rn:Node path="leaf" />
+    </rn:Node>
+    <rn:Node path="leaf" />
+</rn:Node>

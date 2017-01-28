@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'testgame.TestGame'
+mainClassName = 'usonia.Application'
 applicationDefaultJvmArgs = ['-XstartOnFirstThread']
 
 repositories {
@@ -20,6 +20,6 @@ task wrapper(type: Wrapper) {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'testgame.TestGame'
+        attributes 'Main-Class': 'usonia.Application'
     }
 }
